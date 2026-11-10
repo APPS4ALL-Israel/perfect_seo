@@ -1,0 +1,504 @@
+{
+  "nav": {
+    "dashboard": "대시보드",
+    "sites": "사이트",
+    "pipelines": "파이프라인",
+    "analytics": "분석",
+    "posts": "게시글",
+    "products": "상품",
+    "history": "기록"
+  },
+  "sidebar": {
+    "appName": "SEO Engine",
+    "tagline": "오픈소스",
+    "apiConnected": "API 연결됨"
+  },
+  "dashboard": {
+    "title": "대시보드",
+    "subtitle": "SEO 파이프라인 관리, 사이트 성과 모니터링 및 콘텐츠 업데이트 추적.",
+    "loadingSites": "사이트 불러오는 중...",
+    "apiError": "포트 8000에서 API 서버가 실행 중인가요?",
+    "emptyTitle": "구성된 사이트 없음",
+    "emptyDesc": "시작하려면 프로젝트 루트에 {file} 파일을 추가하세요.",
+    "viewSites": "사이트 보기",
+    "siteCount": "구성된 사이트 {n}개 | 구성된 사이트 {n}개",
+    "manageSites": "사이트 관리 →",
+    "runPipeline": "파이프라인 실행",
+    "quickStart": "빠른 시작",
+    "tip1": "파이프라인으로 이동하여 사이트를 선택하세요",
+    "tip2": "새 게시글을 선택하여 첫 AI 블로그 글을 생성하세요",
+    "tip3": "성과가 저조한 콘텐츠를 개선하려면 매주 게시글 업데이트를 실행하세요",
+    "tip4": "Core Web Vitals를 포함한 심층 SEO 감사를 위해 진단을 실행하세요",
+    "gscEnabled": "GSC 활성화",
+    "gscDisabled": "GSC 미연결"
+  },
+  "sites": {
+    "title": "사이트",
+    "subtitle": "프로젝트 루트 YAML 파일에서 찾은 모든 구성된 사이트.",
+    "infoBoxBefore": "사이트는 프로젝트 루트에 YAML 파일로 저장됩니다 (예: ",
+    "infoBoxMiddle": "). 마법사를 통해 생성하려면 ",
+    "infoBoxAfter": "을(를) 클릭하거나, 수동으로 ",
+    "infoBoxManual": "을(를) 복사하세요.",
+    "loading": "불러오는 중...",
+    "emptyDesc": "프로젝트 루트에서 구성 파일을 찾을 수 없습니다.",
+    "addFirstSite": "첫 사이트 추가",
+    "addSite": "사이트 추가",
+    "refresh": "새로고침",
+    "removeSite": "사이트 제거",
+    "removeConfirm": "엔진에서 \"{name}\" 사이트를 제거하시겠습니까?\n\nconfig.{id}.yaml 파일이 삭제됩니다.",
+    "removeSuccess": "\"{name}\" 사이트가 제거되었습니다.",
+    "removeFailed": "사이트 삭제에 실패했습니다.",
+    "editSite": "사이트 설정 수정",
+    "saveSuccess": "사이트 설정이 저장되었습니다."
+  },
+  "pipelines": {
+    "title": "파이프라인",
+    "subtitle": "사이트와 모드를 선택하고 실시간 출력을 확인하세요.",
+    "site": "사이트",
+    "noSitesOption": "구성된 사이트 없음",
+    "pipelineMode": "파이프라인 모드",
+    "seedKeywords": "시드 키워드",
+    "keywordsOptional": "(선택 사항, 한 줄에 하나씩)",
+    "keywordsDefault": "비어있는 경우 구성 파일의 시드 키워드를 기본으로 사용합니다.",
+    "run": "파이프라인 실행",
+    "abort": "중단",
+    "clearLog": "로그 지우기",
+    "downloadLog": "로그 다운로드",
+    "recentRuns": "최근 실행 기록",
+    "records": "기록 {n}개",
+    "col": {
+      "hash": "#",
+      "site": "사이트",
+      "mode": "모드",
+      "started": "시작 시간",
+      "duration": "소요 시간",
+      "status": "상태",
+      "preview": "미리보기"
+    },
+    "status": {
+      "running": "실행 중",
+      "success": "성공",
+      "aborted": "중단됨",
+      "exit": "종료 {code}"
+    },
+    "groups": {
+      "content": "콘텐츠",
+      "seo": "SEO",
+      "media": "미디어 및 상품"
+    },
+    "modes": {
+      "new": {
+        "label": "새 게시글",
+        "desc": "이미지가 포함된 새로운 AI 블로그 글 생성"
+      },
+      "update": {
+        "label": "게시글 업데이트",
+        "desc": "GSC 데이터를 기반으로 성과 저조 게시글 재작성"
+      },
+      "full": {
+        "label": "전체 파이프라인",
+        "desc": "새 글 + 업데이트 + 정적 페이지를 한 번에 실행"
+      },
+      "static": {
+        "label": "정적 페이지",
+        "desc": "홈, 등록 및 기타 정적 페이지 재작성"
+      },
+      "recover": {
+        "label": "순위 복구",
+        "desc": "업데이트 후 순위가 하락한 페이지 복원"
+      },
+      "diagnose": {
+        "label": "SEO 진단",
+        "desc": "심층 SEO 감사: 색인, CWV, 카니발라이제이션"
+      },
+      "dedupe": {
+        "label": "중복 제거",
+        "desc": "키워드 카니발라이제이션 감지 및 수정"
+      },
+      "impact": {
+        "label": "영향 보고서",
+        "desc": "최근 업데이트 전후 GSC 트래픽 영향 측정"
+      },
+      "images": {
+        "label": "이미지 생성",
+        "desc": "이미지가 누락된 글에 데스크톱 및 모바일 이미지 추가"
+      },
+      "products": {
+        "label": "상품 페이지",
+        "desc": "상품 페이지 재작성 및 브랜드 이미지 적용"
+      },
+      "restore_titles": {
+        "label": "제목 복원",
+        "desc": "업데이트 기록에서 원본 URL 슬러그 복원"
+      }
+    }
+  },
+  "analytics": {
+    "title": "분석",
+    "subtitle": "사이트의 Google Search Console 성과 데이터.",
+    "refresh": "새로고침",
+    "connectGsc": "GSC 연결",
+    "authorizing": "인증 중...",
+    "requestIndexing": "재색인 요청",
+    "requestingIndexing": "제출 중...",
+    "indexingRequested": "Google에 사이트맵 제출 완료 ✓",
+    "openingBrowser": "브라우저 여는 중...",
+    "connectGscFull": "Google Search Console 연결",
+    "fetching": "GSC 데이터 가져오는 중...",
+    "notConfigured": {
+      "title": "Google Search Console 미구성",
+      "desc": "이 사이트의 YAML 구성에 {code} 블록(credentials_file, site_url)을 추가하고 파이프라인을 한 번 실행하여 인증하세요."
+    },
+    "notAuthenticated": {
+      "title": "GSC 아직 미인증",
+      "desc": "GSC 연결을 클릭하여 브라우저에서 Google 인증 페이지를 여세요. 토큰은 로컬에 저장되며 한 번만 인증하면 됩니다."
+    },
+    "weeksOption": "{n}주",
+    "cards": {
+      "totalClicks": "총 클릭수",
+      "impressions": "노출수",
+      "avgPosition": "평균 순위",
+      "avgCtr": "평균 클릭률",
+      "lastDays": "최근 {n}일",
+      "pagesTracked": "추적된 페이지 {n}개",
+      "acrossAllPages": "전체 페이지 기준",
+      "clickThroughRate": "클릭률(CTR)"
+    },
+    "charts": {
+      "clicksImpressions": "기간별 클릭수 및 노출수",
+      "top10Pages": "클릭수 기준 상위 10개 페이지",
+      "noSeriesData": "시리즈 데이터 없음",
+      "noData": "데이터 없음",
+      "loadingChart": "불러오는 중..."
+    },
+    "opportunities": {
+      "title": "SEO 기회",
+      "page2Tab": "2페이지 ({n})",
+      "lowCtrTab": "낮은 CTR ({n})",
+      "noPage2": "2페이지 기회를 찾을 수 없습니다.",
+      "noCtr": "낮은 CTR 기회를 찾을 수 없습니다."
+    },
+    "table": {
+      "url": "URL",
+      "clicks": "클릭수",
+      "impressions": "노출수",
+      "position": "순위",
+      "ctr": "CTR"
+    },
+    "topPages": "상위 페이지"
+  },
+  "history": {
+    "title": "업데이트 기록",
+    "subtitle": "모든 콘텐츠 업데이트 및 결과 추적.",
+    "loadHistory": "기록 불러오기",
+    "loading": "불러오는 중...",
+    "empty": "기록이 없습니다 — 업데이트 파이프라인을 실행하면 여기에 기록이 표시됩니다.",
+    "titleChanged": "제목 변경됨",
+    "bodyBackup": "본문 백업",
+    "untitled": "제목 없음"
+  },
+  "posts": {
+    "title": "게시글",
+    "subtitle": "플랫폼에 발행된 콘텐츠 탐색.",
+    "refresh": "새로고침",
+    "filterPlaceholder": "게시글 필터링...",
+    "countOf": "총 {total}개 중 {filtered}개 게시글",
+    "runPipeline": "파이프라인 실행",
+    "loading": "게시글 불러오는 중...",
+    "empty": "이 사이트의 게시글을 찾을 수 없습니다.",
+    "noResults": "\"{query}\"와(과) 일치하는 게시글이 없습니다.",
+    "col": {
+      "title": "제목",
+      "status": "상태",
+      "published": "발행일",
+      "actions": "작업"
+    },
+    "gscTooltip": {
+      "title": "GSC · 최근 28일",
+      "clicks": "클릭수",
+      "impressions": "노출수",
+      "position": "순위",
+      "ctr": "CTR"
+    },
+    "gscAvailable": "GSC 데이터 있음",
+    "copyUrl": "URL 복사",
+    "copied": "복사됨!",
+    "openPost": "게시글 열기"
+  },
+  "products": {
+    "title": "상품",
+    "subtitle": "스토어(WooCommerce / Shopify)의 상품 탐색.",
+    "refresh": "새로고침",
+    "filterPlaceholder": "상품 필터링...",
+    "countOf": "총 {total}개 중 {filtered}개 상품",
+    "runPipeline": "파이프라인 실행",
+    "loading": "상품 불러오는 중...",
+    "empty": "상품을 찾을 수 없습니다. 이 기능은 WooCommerce 및 Shopify 사이트에서 사용할 수 있습니다.",
+    "noResults": "\"{query}\"와(과) 일치하는 상품이 없습니다.",
+    "col": {
+      "product": "상품",
+      "price": "가격",
+      "status": "상태",
+      "added": "추가일",
+      "actions": "작업"
+    },
+    "gscAvailable": "GSC 데이터 있음",
+    "copyUrl": "URL 복사",
+    "copied": "복사됨!",
+    "openProduct": "상품 열기"
+  },
+  "editSite": {
+    "title": "사이트 수정",
+    "loading": "구성 불러오는 중...",
+    "saveChanges": "변경사항 저장",
+    "saving": "저장 중...",
+    "cancel": "취소",
+    "tabs": {
+      "settings": "설정",
+      "credentials": "인증 정보",
+      "seoProtection": "SEO 보호",
+      "content": "콘텐츠"
+    },
+    "settings": {
+      "siteInfoSection": "사이트 정보",
+      "siteName": "사이트 이름",
+      "domain": "도메인",
+      "blogUrl": "블로그 URL",
+      "language": "언어",
+      "country": "국가",
+      "googleDomain": "Google 도메인",
+      "aiSection": "AI 제공자",
+      "apiKey": "{provider} API 키",
+      "model": "모델",
+      "imageModel": "이미지 모델",
+      "noImageModel": "없음 (이미지 생성 건너뛰기)"
+    },
+    "credentials": {
+      "platformNote": "생성 후에는 플랫폼을 변경할 수 없습니다. 플랫폼을 전환하려면 새 사이트를 생성하세요."
+    },
+    "seoProtection": {
+      "protectedPagesSection": "보호된 페이지",
+      "protectedPagesHint": "한 줄에 URL 하나씩 입력하세요. 이 페이지들은 GSC 데이터나 순위에 관계없이 파이프라인 실행 시 절대 재작성되지 않습니다.",
+      "protectedPagesPlaceholder": "https://mysite.com/about/\nhttps://mysite.com/contact/\nhttps://mysite.com/important-landing-page/",
+      "gscSection": "Google Search Console",
+      "gscEnabled": "GSC 보호 활성화",
+      "gscEnabledSubtitle": "실시간 트래픽 데이터를 사용하여 성과 우수 페이지 보호",
+      "credentialsFile": "OAuth 인증 정보 파일",
+      "credentialsHint": "Google Cloud Console의 .json 파일 경로 (프로젝트 루트 기준 상대 경로).",
+      "gscSiteUrl": "GSC 사이트 URL",
+      "gscSiteUrlHint": "Search Console에 표시된 정확한 URL. 비워두면 도메인에서 자동 추출됩니다.",
+      "thresholdsSection": "분류 기준값",
+      "thresholdsHint": "이 기준값은 파이프라인이 업데이트 여부를 결정하기 전에 각 페이지를 분류하는 방식을 정의합니다.",
+      "minClicks": "최소 클릭수 (28일)",
+      "minImpressions": "최소 노출수 (28일)",
+      "maxPosition": "최대 순위",
+      "classificationGuide": "페이지 분류 방식",
+      "topPerformer": "최상위 성과 페이지",
+      "topPerformerDesc": "순위 ≤ {pos}, 클릭수 ≥ {clicks} — 보호됨, 재작성 안 함",
+      "page2": "2페이지 기회 페이지",
+      "page2Desc": "순위 11–30, 노출수 ≥ 20 — 최우선 순위 (1페이지 진입 유도)",
+      "ctrOpportunity": "CTR 기회 페이지",
+      "ctrOpportunityDesc": "순위 ≤ 10, CTR < 3% — 메타 디스크립션만 업데이트, 본문 유지",
+      "lowPerformer": "저성과 페이지",
+      "lowPerformerDesc": "노출수 ≥ 5 — 표준 전체 재작성",
+      "notIndexed": "색인되지 않음",
+      "notIndexedDesc": "GSC 데이터 없음 — 전체 재작성 가능"
+    },
+    "content": {
+      "seedKeywords": "시드 키워드",
+      "seedKeywordsHint": "한 줄에 키워드 하나씩 입력하세요. Google 자동완성 및 트렌드를 통해 확장됩니다.",
+      "competitors": "경쟁사 URL",
+      "competitorsHint": "한 줄에 URL 하나씩 입력하세요. 콘텐츠 개선을 위해 분석됩니다.",
+      "brandVoice": "브랜드 보이스",
+      "brandVoiceHint": "브랜드 톤과 타겟 고객을 설명하세요. 모든 AI 프롬프트에 주입됩니다.",
+      "imageStyleSection": "이미지 스타일",
+      "imageStyleSubtitle": "게시글 대표 이미지 생성을 위해 Imagen에서 사용됩니다.",
+      "imageDescription": "설명",
+      "visualElements": "시각적 요소",
+      "colorPalette": "색상 팔레트",
+      "usp": "고유 강점 (USP)",
+      "uspHint": "한 줄에 하나씩 입력하세요. E-E-A-T 구축 및 경쟁사 차별화를 위해 콘텐츠에 반영됩니다."
+    }
+  },
+  "wizard": {
+    "addNewSite": "새 사이트 추가",
+    "stepOf": "총 {total}단계 중 {current}단계",
+    "creates": "생성 항목",
+    "discardConfirm": "저장되지 않은 변경사항을 취소하고 닫으시겠습니까?",
+    "back": "← 뒤로",
+    "next": "다음 →",
+    "save": "사이트 저장",
+    "saving": "저장 중...",
+    "steps": {
+      "platform": {
+        "label": "플랫폼",
+        "desc": "CMS 선택"
+      },
+      "siteInfo": {
+        "label": "사이트 정보 및 AI",
+        "desc": "기본 설정"
+      },
+      "credentials": {
+        "label": "인증 정보",
+        "desc": "플랫폼 연결"
+      },
+      "searchConsole": {
+        "label": "Search Console",
+        "desc": "GSC 연동 (권장)"
+      },
+      "content": {
+        "label": "콘텐츠",
+        "desc": "키워드 및 브랜드 보이스"
+      },
+      "review": {
+        "label": "검토 및 저장",
+        "desc": "확인 및 생성"
+      }
+    },
+    "platform": {
+      "title": "플랫폼 선택",
+      "subtitle": "콘텐츠가 발행될 위치를 선택하세요. 나중에 구성 파일을 편집하여 변경할 수 있습니다.",
+      "allSupported": "모든 플랫폼이 완벽하게 지원됩니다. 사이트에 맞는 플랫폼을 선택하세요. 나중에 구성 파일을 편집하여 변경할 수 있습니다.",
+      "openSource": "오픈소스",
+      "desc": {
+        "wordpress": "WordPress REST API를 통해 발행합니다. 애플리케이션 비밀번호를 사용하며 OAuth가 필요하지 않습니다.",
+        "woocommerce": "WooCommerce REST API를 사용하여 상품 페이지를 최적화합니다.",
+        "shopify": "Admin API를 통해 Shopify 블로그에 발행하고 상품 설명을 최적화합니다.",
+        "wix": "Wix Headless CMS API를 사용하여 Wix 블로그 및 스토어에 발행합니다.",
+        "mongodb": "React, Vue, Next.js 웹사이트용 헤드리스 블로그 엔진인 blog-poster 오픈소스 CMS 사용자를 위한 설정입니다. 이미지 저장을 위해 MongoDB Atlas와 Supabase가 필요합니다."
+      }
+    },
+    "siteInfo": {
+      "title": "사이트 정보 및 AI 설정",
+      "subtitle": "사이트 세부정보를 구성하고 AI 제공자를 선택하세요.",
+      "siteName": "사이트 이름",
+      "siteId": "사이트 ID",
+      "siteIdHint": "소문자, 영문/숫자/하이픈만 가능",
+      "domain": "도메인",
+      "domainHint": "https:// 제외",
+      "blogUrl": "블로그 URL",
+      "language": "언어",
+      "languageHint": "예: ko, en, he, fr, de",
+      "country": "국가",
+      "countryHint": "예: kr, us, il, gb, de",
+      "googleDomain": "Google 도메인",
+      "googleDomainHint": "국가에 따라 자동 설정",
+      "aiProvider": "AI 제공자",
+      "aiProviderSubtitle": "원하는 제공자를 선택하고 보유한 API 키를 사용하세요.",
+      "apiKey": "{provider} API 키",
+      "getYoursAt": "키 발급처:",
+      "model": "모델",
+      "modelHint": "또는 선택 후 상단에 원하는 모델 ID 직접 입력",
+      "imageModel": "이미지 생성 모델",
+      "imageModelHint": "게시글 대표 이미지를 생성하는 데 사용",
+      "noImageModel": "없음 (이미지 생성 건너뛰기)"
+    },
+    "credentials": {
+      "title": "플랫폼 인증 정보",
+      "subtitle": "SEO 엔진을 {platform} 인스턴스에 연결하세요.",
+      "mongodbSection": "MongoDB 연결",
+      "mongodbUri": "MongoDB URI",
+      "mongodbUriHint": "MongoDB Atlas → Connect → Drivers에서 확인",
+      "database": "데이터베이스",
+      "collection": "컬렉션",
+      "wordpressSection": "WordPress REST API",
+      "siteUrl": "사이트 URL",
+      "username": "사용자 이름",
+      "appPassword": "애플리케이션 비밀번호",
+      "wordpressNote": "WordPress 관리자 → 사용자 → 프로필 편집 → 애플리케이션 비밀번호에서 생성하세요. WordPress 5.6 이상이 필요합니다.",
+      "woocommerceSection": "WooCommerce REST API",
+      "consumerKey": "컨슈머 키",
+      "consumerSecret": "컨슈머 시크릿",
+      "woocommerceNote": "WooCommerce → 설정 → 고급 → REST API → 키 추가(읽기/쓰기 권한)에서 키를 생성하세요.",
+      "shopifySection": "Shopify Admin API",
+      "storeDomain": "스토어 도메인",
+      "storeDomainHint": ".myshopify.com 도메인을 사용하세요",
+      "adminToken": "Admin API 액세스 토큰",
+      "shopifyNote": "Shopify 관리자 → 앱 → 앱 개발에서 커스텀 앱을 만드세요. Articles 및 Products에 대한 쓰기 권한을 활성화하세요.",
+      "wixSection": "Wix Headless API",
+      "apiKeyLabel": "API 키",
+      "siteIdLabel": "사이트 ID",
+      "wixSiteIdHint": "Wix 대시보드 URL에서 확인: manage.wix.com/dashboard/SITE-ID/home",
+      "wixNote": "Wix 연결은 첫 파이프라인 실행 시 확인됩니다. API 키에 Blog 및 Stores 권한이 있어야 합니다.",
+      "supabaseSection": "이미지 스토리지 (Supabase)",
+      "supabaseSubtitle": "생성된 이미지는 Supabase Storage에 저장됩니다.",
+      "supabaseUrl": "Supabase URL",
+      "supabaseAnonKey": "Supabase Anon 키",
+      "bucketName": "버킷 이름",
+      "testConnection": "연결 테스트",
+      "testing": "테스트 중...",
+      "verifyHint": "저장하기 전에 인증 정보를 확인하세요"
+    },
+    "gsc": {
+      "title": "Google Search Console",
+      "subtitle": "선택 사항이지만 강력히 권장합니다. GSC 데이터는 재작성할 글, 보호할 글, 순위 복구 방법 등 스마트 업데이트 결정을 주도합니다.",
+      "enableLabel": "Google Search Console 연동 활성화",
+      "enableSubtitle": "스마트 순위 지정, CTR 보호 및 복구 기능 잠금 해제",
+      "credentialsFile": "OAuth 인증 정보 파일",
+      "credentialsHint": "Google Cloud Console의 .json 파일 경로 (프로젝트 루트 기준 상대 경로). 토큰 파일(gsc_token.json)은 첫 로그인 후 자동 생성됩니다.",
+      "gscSiteUrl": "GSC 사이트 URL",
+      "gscSiteUrlHint": "Search Console에 표시된 정확한 URL. 비워두면 도메인에서 자동 추출됩니다.",
+      "thresholdsTitle": "보호 기준값",
+      "thresholdsHint": "이 기준값을 충족하는 게시글은 성과 우수로 처리되어 순위 하락을 방지하기 위해 재작성을 건너뜁니다.",
+      "minClicks": "최소 클릭수 (28일)",
+      "minImpressions": "최소 노출수 (28일)",
+      "maxPosition": "최대 순위",
+      "setupTitle": "OAuth 인증 정보 설정 방법",
+      "laterNote": "나중에 구성 파일을 직접 편집하여 GSC를 설정할 수도 있습니다."
+    },
+    "content": {
+      "title": "콘텐츠 설정",
+      "subtitle": "모든 필드는 선택 사항입니다 — AI가 브랜드와 타겟 키워드에 맞는 콘텐츠를 작성하는 데 도움이 됩니다. 구성 파일을 편집하여 언제든지 업데이트할 수 있습니다.",
+      "optional": "선택 사항",
+      "seedKeywords": "시드 키워드",
+      "seedKeywordsHint": "한 줄에 키워드 하나씩 입력하세요. 엔진이 Google 자동완성 및 트렌드를 통해 이를 확장합니다.",
+      "competitors": "경쟁사 URL",
+      "competitorsHint": "한 줄에 URL 하나씩 입력하세요. 엔진이 게시글 개선을 위해 경쟁사 콘텐츠를 분석합니다.",
+      "brandVoice": "브랜드 보이스",
+      "brandVoiceHint": "브랜드 톤과 타겟 고객을 설명하세요. 모든 AI 프롬프트에 주입됩니다.",
+      "imageStyle": "이미지 스타일",
+      "imageStyleSubtitle": "게시글 이미지를 생성하기 위해 Imagen에서 사용됩니다",
+      "imageDescription": "설명",
+      "visualElements": "시각적 요소",
+      "colorPalette": "색상 팔레트",
+      "usp": "고유 강점 (USP)",
+      "uspHint": "한 줄에 하나씩 입력하세요. E-E-A-T 구축 및 경쟁사 차별화를 위해 콘텐츠에 반영됩니다."
+    },
+    "review": {
+      "title": "검토 및 저장",
+      "subtitle": "모든 내용이 맞습니까? \"사이트 저장\"을 클릭하여 프로젝트 루트에 {file}을(를) 생성하세요.",
+      "sitePlatform": "사이트 및 플랫폼",
+      "siteId": "사이트 ID",
+      "platform": "플랫폼",
+      "name": "이름",
+      "domain": "도메인",
+      "language": "언어",
+      "googleDomain": "Google 도메인",
+      "aiSettings": "AI 제공자 및 설정",
+      "provider": "제공자",
+      "model": "모델",
+      "apiKey": "API 키",
+      "imageModel": "이미지 모델",
+      "credentialsSection": "플랫폼 인증 정보",
+      "mongodbUri": "MongoDB URI",
+      "database": "데이터베이스",
+      "collection": "컬렉션",
+      "siteUrl": "사이트 URL",
+      "username": "사용자 이름",
+      "appPassword": "앱 비밀번호",
+      "storeDomain": "스토어 도메인",
+      "apiToken": "API 토큰",
+      "configuredOk": "구성됨 ✓",
+      "additionalSettings": "추가 설정",
+      "searchConsole": "Search Console",
+      "seedKeywords": "시드 키워드",
+      "competitors": "경쟁사",
+      "brandVoice": "브랜드 보이스",
+      "enabled": "활성화됨 ✓",
+      "disabled": "비활성화됨",
+      "added": "{n}개 추가됨",
+      "set": "설정됨 ✓",
+      "notSet": "설정 안 됨"
+    }
+  }
+}
